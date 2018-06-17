@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Reply extends Model
 {
     //
+
+    protected $guarded = [];
+
     public function question()
     {
         # code...
@@ -16,7 +19,7 @@ class Reply extends Model
     public function user()
     {
         # code...
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\User');
     }
     public function like()
     {
