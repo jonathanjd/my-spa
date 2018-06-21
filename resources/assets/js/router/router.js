@@ -4,6 +4,7 @@ import AppLogin from '../components/AppLogin.vue';
 import AppSignup from '../components/AppSignup.vue';
 import AppForum from '../components/AppForum.vue';
 import AppLogout from '../components/AppLogout.vue';
+import AppRead from '../components/AppRead.vue';
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,11 @@ const routes = [{
     path: '/logout',
     component: AppLogout,
   },
+  {
+    path: '/question/:slug',
+    component: AppRead,
+    name: 'read'
+  }
 ]
 
 const router = new VueRouter({
