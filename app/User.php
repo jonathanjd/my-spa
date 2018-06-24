@@ -2,10 +2,11 @@
 
 namespace App;
 
+use App\Model\Question;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Symfony\Component\Console\Question\Question;
+
 
 class User extends Authenticatable implements JWTSubject
 {
@@ -35,7 +36,7 @@ class User extends Authenticatable implements JWTSubject
         return $this->hasMany(Question::class);
     }
 
-     /**
+    /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *
      * @return mixed
